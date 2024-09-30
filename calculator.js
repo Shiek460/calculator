@@ -82,7 +82,10 @@ abs.addEventListener('click', () => {
 let percent = document.querySelector('#percent');
 percent.addEventListener('click', () => {
     display.textContent *= .01;
-})
+});
+
+let backspace = document.querySelector('#backspace');
+backspace.addEventListener('click', removeLast)
 
 let calledFunction = {
     function: '',
@@ -95,4 +98,17 @@ let functions = {
     subtract: function(a, b) {return a - b},
     multiply: function(a, b) {return a * b},
     divide: function(a, b) {return a / b},
+}
+
+function removeLast() {
+    let numbers = Array.from(display.textContent);
+    display.textContent = ''
+    if (numbers.length > 1) {
+        numbers.pop();
+    } else {
+        numbers = [0];
+    }
+    for (let i = 0; i < numbers.length; i++) {
+        display.textContent += numbers[i];
+    }
 }

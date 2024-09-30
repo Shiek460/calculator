@@ -21,8 +21,15 @@ body {
     font-size: x-large;
 }
 
-.text, .interact {
+.text {
     width: 70%;
+    height: 70%;
+    margin: 0 10%;
+}
+
+.interact {
+    width: 70%;
+    height: 70%;
 }
 
 .numbers {
@@ -36,7 +43,7 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 15px;
     margin: 5px;
-    width: 29%;
+    width: 28%;
     height: 30%;
 }
 
