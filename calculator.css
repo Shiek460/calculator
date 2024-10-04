@@ -39,7 +39,7 @@ body {
     flex-wrap: wrap;
 }
 
-.number, .toggle, .function {
+.number, .toggle, .function, .period {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 15px;
     margin: 5px;

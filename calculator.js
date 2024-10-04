@@ -12,6 +12,28 @@ numbers.forEach((number) => {
     });
 });
 
+document.addEventListener('keypress', (e) => {
+    for (let number in numbers) {
+        if (number == e.key && display.textContent == '0') {
+            display.textContent = e.key;
+            console.log(e.key);
+            clear.textContent = 'C'
+        } else if (number == e.key) {
+            display.textContent += e.key;
+            console.log(e.key);
+        }
+    }
+});
+
+let dot = document.querySelector('.period');
+dot.addEventListener('click', () => {
+    if (display.textContent.includes('.')) {
+        display.textContent += '';
+    } else {
+        display.textContent += dot.textContent
+    }
+});
+
 let multiply = document.querySelector('#multiply');
 multiply.addEventListener('click', () => {
     calledFunction.function = 'multiply';
@@ -44,7 +66,7 @@ let equal = document.querySelector('#evaluate');
 equal.addEventListener('click', evaluate);
 
 function evaluate() {
-    if (calledFunction.secondVariable == '0' && calledFunction.function == 'divide') {
+    if (calledFunction.secondVariable === '0' && calledFunction.function === 'divide') {
         alert("Try Again. Can't divide by zero!");
     } else {
         calledFunction.secondVariable = display.textContent;
